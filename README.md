@@ -192,17 +192,17 @@ task-c
 
 | 任务名称 | 主类 |
 | --- | --- |
-| `store-detail-mall` | `com.lingyun.business.storeDetail.mall.job.FlinkMallJob` |
-| `goods-detail-category` | `com.lingyun.business.goodsDetail.category.job.FlinkCategoryJob` |
-| `goods-detail-goods` | `com.lingyun.business.goodsDetail.goods.job.FlinkGoodsJob` |
-| `goods-detail-mall` | `com.lingyun.business.goodsDetail.mall.job.FlinkMallJob` |
-| `goods-detail-review` | `com.lingyun.business.goodsDetail.review.job.FlinkReviewJob` |
-| `goods-detail-site` | `com.lingyun.business.goodsDetail.site.job.FlinkSiteJob` |
-| `keyword-html-category` | `com.lingyun.business.keywordSearch.html.category.job.FlinkKeyCategoryJob` |
-| `keyword-html-goods` | `com.lingyun.business.keywordSearch.html.goods.job.FlinkKeyGoodsJob` |
-| `keyword-html-site` | `com.lingyun.business.keywordSearch.html.site.job.FlinkKeySiteJob` |
-| `keyword-more-category` | `com.lingyun.business.keywordSearch.more.category.job.FlinkKeyMoreCategoryJob` |
-| `keyword-more-goods` | `com.lingyun.business.keywordSearch.more.goods.job.FlinkKeyMoreGoodsJob` |
+| `store-detail-mall` | `com.ecomselect.business.storeDetail.mall.job.FlinkMallJob` |
+| `goods-detail-category` | `com.ecomselect.business.goodsDetail.category.job.FlinkCategoryJob` |
+| `goods-detail-goods` | `com.ecomselect.business.goodsDetail.goods.job.FlinkGoodsJob` |
+| `goods-detail-mall` | `com.ecomselect.business.goodsDetail.mall.job.FlinkMallJob` |
+| `goods-detail-review` | `com.ecomselect.business.goodsDetail.review.job.FlinkReviewJob` |
+| `goods-detail-site` | `com.ecomselect.business.goodsDetail.site.job.FlinkSiteJob` |
+| `keyword-html-category` | `com.ecomselect.business.keywordSearch.html.category.job.FlinkKeyCategoryJob` |
+| `keyword-html-goods` | `com.ecomselect.business.keywordSearch.html.goods.job.FlinkKeyGoodsJob` |
+| `keyword-html-site` | `com.ecomselect.business.keywordSearch.html.site.job.FlinkKeySiteJob` |
+| `keyword-more-category` | `com.ecomselect.business.keywordSearch.more.category.job.FlinkKeyMoreCategoryJob` |
+| `keyword-more-goods` | `com.ecomselect.business.keywordSearch.more.goods.job.FlinkKeyMoreGoodsJob` |
 
 ## 运行时注意事项
 

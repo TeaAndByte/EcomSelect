@@ -205,15 +205,15 @@ validate_job_resources() {
 
 resolve_main_class() {
     case "$1" in
-        goods-detail-category) echo "com.lingyun.business.goodsDetail.category.job.FlinkCategoryJob" ;;
-        goods-detail-goods) echo "com.lingyun.business.goodsDetail.goods.job.FlinkGoodsJob" ;;
-        goods-detail-mall) echo "com.lingyun.business.goodsDetail.mall.job.FlinkMallJob" ;;
-        goods-detail-review) echo "com.lingyun.business.goodsDetail.review.job.FlinkReviewJob" ;;
-        goods-detail-site) echo "com.lingyun.business.goodsDetail.site.job.FlinkSiteJob" ;;
-        geekbi-goods) echo "com.lingyun.business.geekbiGoods.job.FlinkGeekbiGoodsJob" ;;
-        keyword-more-category) echo "com.lingyun.business.keywordSearch.more.category.job.FlinkKeyMoreCategoryJob" ;;
-        keyword-more-goods) echo "com.lingyun.business.keywordSearch.more.goods.job.FlinkKeyMoreGoodsJob" ;;
-        store-detail-mall) echo "com.lingyun.business.storeDetail.mall.job.FlinkMallJob" ;;
+        goods-detail-category) echo "com.ecomselect.business.goodsDetail.category.job.FlinkCategoryJob" ;;
+        goods-detail-goods) echo "com.ecomselect.business.goodsDetail.goods.job.FlinkGoodsJob" ;;
+        goods-detail-mall) echo "com.ecomselect.business.goodsDetail.mall.job.FlinkMallJob" ;;
+        goods-detail-review) echo "com.ecomselect.business.goodsDetail.review.job.FlinkReviewJob" ;;
+        goods-detail-site) echo "com.ecomselect.business.goodsDetail.site.job.FlinkSiteJob" ;;
+        geekbi-goods) echo "com.ecomselect.business.geekbiGoods.job.FlinkGeekbiGoodsJob" ;;
+        keyword-more-category) echo "com.ecomselect.business.keywordSearch.more.category.job.FlinkKeyMoreCategoryJob" ;;
+        keyword-more-goods) echo "com.ecomselect.business.keywordSearch.more.goods.job.FlinkKeyMoreGoodsJob" ;;
+        store-detail-mall) echo "com.ecomselect.business.storeDetail.mall.job.FlinkMallJob" ;;
         *) return 1 ;;
     esac
 }

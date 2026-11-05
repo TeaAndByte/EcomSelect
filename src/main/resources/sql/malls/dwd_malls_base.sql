@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS lingyun.dwd_malls_base;
+DROP TABLE IF EXISTS ecom_select.dwd_malls_base;
 
-CREATE TABLE lingyun.dwd_malls_base (
+CREATE TABLE ecom_select.dwd_malls_base (
     mallId BIGINT COMMENT '店铺id',
     siteId INT COMMENT '店铺采集站点',
     `date` DATE COMMENT '店铺信息统计日期',

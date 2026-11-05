@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS lingyun.ods_geekbi_goods_raw (
+CREATE TABLE IF NOT EXISTS ecom_select.ods_geekbi_goods_raw (
     `goodsId` BIGINT NOT NULL COMMENT '商品id，从data.goods.goodsId提取',
     `siteId` INT NOT NULL COMMENT '站点id，从data.site.id提取',
     `date` DATE NOT NULL COMMENT '数据采集日期',

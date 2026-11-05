@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS lingyun.ods_malls_raw;
+DROP TABLE IF EXISTS ecom_select.ods_malls_raw;
 
-CREATE TABLE lingyun.ods_malls_raw (
+CREATE TABLE ecom_select.ods_malls_raw (
     mallId BIGINT COMMENT '店铺id',
     siteId INT COMMENT '店铺采集站点',
     `date` DATE COMMENT '数据采集日期',

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS lingyun.dwd_geekbi_goods_daily
+CREATE TABLE IF NOT EXISTS ecom_select.dwd_geekbi_goods_daily
 (
     `goodsId` BIGINT NOT NULL COMMENT '商品id',
     `siteId` INT NOT NULL COMMENT '站点id，对应data.site.id',
