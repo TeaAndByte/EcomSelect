@@ -76,7 +76,7 @@ Examples:
   ./wstart list
   ./wstart status
   ./wstart store-detail-mall
-  ./wstart -jar lingfeng_xuanpin_flink_task-1.0-SNAPSHOT-all.jar store-detail-mall
+  ./wstart -jar ecom-select-flink-1.0-SNAPSHOT-all.jar store-detail-mall
   ./wstart all
 
 Environment overrides:
@@ -86,7 +86,7 @@ Environment overrides:
   FLINK_BIN               Flink executable, default: flink
   FLINK_TARGET            Flink deployment target, default: yarn-per-job
   FLINK_APP_NAME          Explicit YARN application name for single-task start
-  FLINK_APP_NAME_PREFIX   Prefix for derived app names, default: lingfeng-
+  FLINK_APP_NAME_PREFIX   Prefix for derived app names, default: ecomselect-
   FLINK_JOBMANAGER_MEMORY Default: 1024m
   FLINK_TASKMANAGER_MEMORY Override per-job taskmanager memory
   FLINK_TASK_SLOTS        Override per-job task slots
@@ -226,7 +226,7 @@ resolve_application_name() {
         return 0
     fi
 
-    echo "${FLINK_APP_NAME_PREFIX:-lingfeng-}${job_name}"
+    echo "${FLINK_APP_NAME_PREFIX:-ecomselect-}${job_name}"
 }
 
 resolve_jar_path() {
@@ -278,10 +278,10 @@ find_app_jar() {
 
     while IFS= read -r jar_file; do
         jar_files+=("${jar_file}")
-    done < <(find "${configured_dir}" -maxdepth 1 -type f -name 'lingfeng_xuanpin*.jar' ! -name 'original-*.jar' | sort)
+    done < <(find "${configured_dir}" -maxdepth 1 -type f -name 'ecom-select-flink*.jar' ! -name 'original-*.jar' | sort)
 
     if [ "${#jar_files[@]}" -eq 0 ]; then
-        echo "Jar not found under ${configured_dir}. Expected ../jar/lingfeng_xuanpin*.jar or pass -jar <jar-file>." >&2
+        echo "Jar not found under ${configured_dir}. Expected ../jar/ecom-select-flink*.jar or pass -jar <jar-file>." >&2
         return 1
     fi
 
