@@ -76,7 +76,7 @@ Examples:
   ./wstart list
   ./wstart status
   ./wstart store-detail-mall
-  ./wstart -jar ecom-select-flink-1.0-SNAPSHOT-all.jar store-detail-mall
+  ./wstart -jar ecom_select_flink_task-1.0-SNAPSHOT-all.jar store-detail-mall
   ./wstart all
 
 Environment overrides:
@@ -278,10 +278,10 @@ find_app_jar() {
 
     while IFS= read -r jar_file; do
         jar_files+=("${jar_file}")
-    done < <(find "${configured_dir}" -maxdepth 1 -type f -name 'ecom-select-flink*.jar' ! -name 'original-*.jar' | sort)
+    done < <(find "${configured_dir}" -maxdepth 1 -type f -name 'ecom_select_flink_task*.jar' ! -name 'original-*.jar' | sort)
 
     if [ "${#jar_files[@]}" -eq 0 ]; then
-        echo "Jar not found under ${configured_dir}. Expected ../jar/ecom-select-flink*.jar or pass -jar <jar-file>." >&2
+        echo "Jar not found under ${configured_dir}. Expected ../jar/ecom_select_flink_task*.jar or pass -jar <jar-file>." >&2
         return 1
     fi
 
