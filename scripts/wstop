@@ -35,7 +35,7 @@ Environment overrides:
   YARN_BIN               Yarn executable, default: yarn
   YARN_APP_STATES        Query states for active applications, default: RUNNING,ACCEPTED,SUBMITTED
   FLINK_APP_NAME         Explicit YARN application name for single-task stop
-  FLINK_APP_NAME_PREFIX  Prefix for derived app names, default: lingfeng-
+  FLINK_APP_NAME_PREFIX  Prefix for derived app names, default: ecomselect-
   STOP_WAIT_SECONDS      Seconds to wait for YARN app to disappear, default: 30
 EOF
 }
@@ -82,7 +82,7 @@ resolve_application_name() {
         return 0
     fi
 
-    echo "${FLINK_APP_NAME_PREFIX:-lingfeng-}${job_name}"
+    echo "${FLINK_APP_NAME_PREFIX:-ecomselect-}${job_name}"
 }
 
 query_yarn_app_lines() {
