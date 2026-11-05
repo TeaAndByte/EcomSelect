@@ -78,7 +78,7 @@ mvn package
 
 主要输出：
 
-- `target/ecom-select-flink-1.0-SNAPSHOT-all.jar`
+- `target/ecom_select_flink_task-1.0-SNAPSHOT-all.jar`
 
 ## 外部数据源 JSONL 导入 Kafka
 
@@ -113,7 +113,7 @@ python scripts/file_to_kafka.py `
 ./bin/wstart list
 ./bin/wstart status
 ./bin/wstart store-detail-mall
-./bin/wstart -jar ecom-select-flink-1.0-SNAPSHOT-all.jar store-detail-mall
+./bin/wstart -jar ecom_select_flink_task-1.0-SNAPSHOT-all.jar store-detail-mall
 ./bin/wstart all
 ./bin/wstop list
 ./bin/wstop store-detail-mall
@@ -131,10 +131,10 @@ deploy/
 |   `-- wstop
 `-- jar/
     |-- kafkaTest.sh
-    `-- ecom-select-flink-1.0-SNAPSHOT-all.jar
+    `-- ecom_select_flink_task-1.0-SNAPSHOT-all.jar
 ```
 
-将仓库中的 `scripts/wstart` 和 `scripts/wstop` 复制到服务器的 `bin/` 目录。将 `scripts/kafkaTest.sh` 复制到与打包好的 jar 相同的目录。默认情况下，启动脚本查找 `../jar/ecom-select-flink*.jar`。如果存在多个匹配的 jar 文件，请使用 `-jar <jar-file>` 明确选择一个。
+将仓库中的 `scripts/wstart` 和 `scripts/wstop` 复制到服务器的 `bin/` 目录。将 `scripts/kafkaTest.sh` 复制到与打包好的 jar 相同的目录。默认情况下，启动脚本查找 `../jar/ecom_select_flink_task*.jar`。如果存在多个匹配的 jar 文件，请使用 `-jar <jar-file>` 明确选择一个。
 
 启动脚本只使用前导脚本参数，如 `-jar <jar-file>` 和 `<task-name|all|list|status>`。`all` 启动每个任务，`list` 打印支持的任务名称，`status` 打印当前的 YARN 状态，任何其他目标都被视为任务名称。额外的任务参数仅支持单任务启动。
 
@@ -152,7 +152,7 @@ flink run \
   -D log4j.configurationFile=file:/opt/module/flink/conf/log4j.properties \
   -p <parallelism> \
   -c <main-class> \
-  ../jar/ecom-select-flink*.jar
+  ../jar/ecom_select_flink_task*.jar
 ```
 
 TaskManager 内存、任务槽和并行度在 `wstart` 文件顶部的 `FLINK_JOB_RESOURCES` 表中按任务定义。JobManager 内存由所有作业共享，默认为 `1024m`。
@@ -215,9 +215,9 @@ task-c
 这些作业参数适用于本地测试，不适用于部署脚本：
 
 ```bash
-flink run -c <main-class> target/ecom-select-flink-1.0-SNAPSHOT-all.jar --local true
-flink run -c <main-class> target/ecom-select-flink-1.0-SNAPSHOT-all.jar --local true --file samples/商品详情页.json
-flink run -c <main-class> target/ecom-select-flink-1.0-SNAPSHOT-all.jar --local true --file /path/to/sample.json
+flink run -c <main-class> target/ecom_select_flink_task-1.0-SNAPSHOT-all.jar --local true
+flink run -c <main-class> target/ecom_select_flink_task-1.0-SNAPSHOT-all.jar --local true --file samples/商品详情页.json
+flink run -c <main-class> target/ecom_select_flink_task-1.0-SNAPSHOT-all.jar --local true --file /path/to/sample.json
 ```
 
 没有 `--local true` 时，作业从 Kafka 读取。有 `--local true` 时，每个作业读取 `src/main/resources/samples/` 下的默认样本；`--file` 覆盖该样本路径。首先尝试文件系统路径，然后是类路径资源。
